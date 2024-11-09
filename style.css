@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+#content {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#salvarBtn {
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0 40px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-left: 90px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select, input {
+    width: 50%;
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 80px;
+    border-radius: 8px;
+}
+
+.qualidade-ar {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.qualidade-ar h3 {
+    margin: 10px 0px 10px 0px;
+}
+
+#qualidade-ar-status {
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#qualidade-ar-dados {
+    text-align: center;
+}
+
+#tabela-previsao {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tabela-previsao th, #tabela-previsao td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#tabela-previsao th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+p#info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        margin-left: 30px;
+        align-items: center;
+    }
+
+    .form-group label, .form-group select, .form-group input {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    #tabela-previsao th, #tabela-previsao td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #salvarBtn {
+        width: 25%;
+        padding: 12px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .qualidade-ar {
+        padding: 10px;
+    }
+
+    #qualidade-ar-status {
+        font-size: 14px;
+    }
+
+    #info {
+        font-size: 16px;
+    }
+
+    select, input {
+        margin-left: 0px;
+    }
+} 
+
+#tabela-container {
+    overflow-x: auto;
+}
+
+@media print {
+    body {
+        width: 100%;
+    }
+
+    #content {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    #tabela-previsao {
+        font-size: 12px;
+    }
+}

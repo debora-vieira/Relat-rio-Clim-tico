@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Climático</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="content">
+    <button onclick="salvarPDF(document.getElementById('content'), 'Relatório_Clima')" id="salvarBtn">🖫 SALVAR</button>
+    <h1>RELATÓRIO CLIMÁTICO</h1>
+
+    <div class="form-group">
+        <label for="estado">Estado:</label>
+        <select id="estado" onchange="listarCidades()" disabled>
+            <option value="">Selecione o Estado</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="cidade">Cidade:</label>
+        <select id="cidade" onchange="atualizarDados()" disabled>
+            <option value="">Selecione a Cidade</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="data">Período de Coleta:</label>
+        <input type="date" id="data" onchange="atualizarDados()" disabled>
+    </div>
+
+    <div class="qualidade-ar">
+        <h3>Qualidade do Ar</h3>
+        <div id="qualidade-ar-status"></div>
+        <div id="qualidade-ar-dados"></div>
+    </div>
+    <hr>
+    <p id="info"></p>
+    <hr>
+    <div id="tabela-container">
+        <table id="tabela-previsao">
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    <th>Condição</th>
+                    <th>Chuva (%)</th>
+                    <th>Temperatura (°C)</th>
+                    <th>Sensação (°C)</th>
+                    <th>Umidade (%)</th>
+                    <th>Vento (Kph)</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
